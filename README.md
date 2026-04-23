@@ -28,18 +28,3 @@ javac -d bin src/*.java
 java -cp bin Main
 ```
 
-## 🔁 Workflow
-
-# 1. แก้โค้ดใน src/
-
-# 2. compile ใหม่
-
-```bash
-javac -d bin src/*.java
-```
-
-# 3. รันโปรแกรม
-
-```bash
-java -cp bin Main
-```
