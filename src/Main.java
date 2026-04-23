@@ -6,7 +6,7 @@ public class Main {
 
         System.out.println("=== 2 PLAYER BATTLE GAME ===");
 
-        sc.nextLine(); 
+        sc.nextLine();
         System.out.print("\nEnter Player 1 name: ");
         String p1Name = sc.nextLine();
 
@@ -18,7 +18,7 @@ public class Main {
         int p1Choice = sc.nextInt();
         Character player1 = createCharacter(p1Choice, p1Name);
 
-        sc.nextLine(); 
+        sc.nextLine();
         System.out.print("\nEnter Player 2 name: ");
         String p2Name = sc.nextLine();
 
@@ -40,7 +40,8 @@ public class Main {
             System.out.println("\n" + player1.getName() + " turn:");
             playerTurn(sc, player1, player2);
 
-            if (!player2.isAlive()) break;
+            if (!player2.isAlive())
+                break;
 
             System.out.println("\n" + player2.getName() + " turn:");
             playerTurn(sc, player2, player1);
@@ -51,9 +52,9 @@ public class Main {
         System.out.println("\n=== GAME OVER ===");
 
         if (player1.isAlive()) {
-            System.out.println(player1.getName() + " Wins! 🎉");
+            System.out.println(player1.getName() + " Wins!");
         } else {
-            System.out.println(player2.getName() + " Wins! 🎉");
+            System.out.println(player2.getName() + " Wins!");
         }
 
         sc.close();
@@ -86,9 +87,9 @@ public class Main {
     }
 
     public static void showStatus(Character p1, Character p2) {
-        System.out.println("\n📊 ===== STATUS =====");
-        System.out.println(p1.getName() + " ❤️ " + p1.getHp());
-        System.out.println(p2.getName() + " ❤️ " + p2.getHp());
+        System.out.println("\n===== STATUS =====");
+        System.out.println(p1.getName() + " : " + p1.getHp());
+        System.out.println(p2.getName() + " : " + p2.getHp());
         System.out.println("=====================");
     }
 }

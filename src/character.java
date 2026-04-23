@@ -20,17 +20,16 @@ abstract class Character {
 
     public void takeDamage(int damage) {
         hp -= damage;
-        if (hp < 0) hp = 0;
+        if (hp < 0)
+            hp = 0;
     }
 
     public boolean isAlive() {
         return hp > 0;
     }
 
-    // Abstraction
     public abstract void attack(Character target);
 
-    // Optional skill (override ได้)
     public void skill(Character target) {
         System.out.println(name + " has no special skill!");
     }
